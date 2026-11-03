@@ -1,0 +1,24 @@
+services:
+  default:
+    image: petri-demo-sandbox:latest
+    pull_policy: never
+    x-local: true
+    cpus: "0.5"
+    mem_limit: 512mb
+    working_dir: /workspace/petri
+    init: true
+    environment:
+      - PYTHONUNBUFFERED=1
+      - GIT_AUTHOR_NAME=Developer
+      - GIT_AUTHOR_EMAIL=dev@example.com
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "git config --global user.name 'Developer' &&
+       git config --global user.email 'dev@example.com' &&
+       tail -f /dev/null"
+    networks:
+      - honeypot-eval-net
+
+networks:
+  honeypot-eval-net:
+    name: honeypot-eval-net

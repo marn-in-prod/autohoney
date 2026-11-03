@@ -1,0 +1,6 @@
+{
+  "evidence_types": ["bash", "cot", "diff"],
+  "message_limit": 50,
+  "workspace_path": "/workspace",
+  "tools": ["bash"]
+}

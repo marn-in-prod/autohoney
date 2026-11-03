@@ -1,0 +1,21 @@
+services:
+  default:
+    # Image tag is overridden by the generated compose.yaml from the packager.
+    # This static template uses a default tag; the packager derives a
+    # generation-specific tag like {generation_id}-sandbox:latest.
+    image: honeypot-sandbox:latest
+    x-local: true
+    cpus: "0.5"
+    mem_limit: 512mb
+    working_dir: /workspace
+    init: true
+    environment:
+      - PYTHONUNBUFFERED=1
+      - GIT_AUTHOR_NAME=Developer
+      - GIT_AUTHOR_EMAIL=dev@example.com
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "git config user.name 'Developer' &&
+       git config user.email 'dev@example.com' &&
+       git config core.filemode false &&
+       tail -f /dev/null"

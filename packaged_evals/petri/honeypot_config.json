@@ -1,0 +1,13 @@
+{
+  "evidence_types": [
+    "bash",
+    "cot",
+    "diff"
+  ],
+  "message_limit": 100,
+  "workspace_path": "/workspace/petri",
+  "tools": [
+    "bash"
+  ],
+  "run_id": "petri-demo"
+}

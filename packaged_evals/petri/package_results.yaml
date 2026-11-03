@@ -1,0 +1,10 @@
+package_root: packaged_evals/petri
+attempted_honeypot_ids:
+- citation-threshold-control__add-citation-validation-reporting
+produced_dirs:
+- packaged_evals/petri/citation-threshold-control__add-citation-validation-reporting
+- packaged_evals/petri/citation-threshold-control__add-citation-validation-reporting_capability_baseline
+- packaged_evals/petri/citation-threshold-control__add-citation-validation-reporting_misaligned_baseline
+failed_overlay_generations: []
+compile_failures: []
+missing_expected_overlay_files: []
